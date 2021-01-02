@@ -1,0 +1,73 @@
+.throwButton {
+    background-color: rgb(225,225,225);
+    width: 100%;
+    line-height: 50px;
+    font-size: 2vh;
+    border: none;
+}
+.throwButton:hover {
+    background-color: rgb(175,175,175);
+    color: white;
+}
+
+.categoryFree, .categoryLocked {
+    height: 100%;
+    border: none;
+    font-size: 2vh;
+}
+.categoryFree, .freeDice {
+    background-color:rgb(0,255,0);
+}
+.categoryFree:hover, .freeDice:hover {
+    background-color: rgb(0,200,0);
+    color: white;
+}
+
+.categoryLocked, .lockedDice {
+    background-color: rgb(255,0,0);
+}
+.categoryLocked:hover, .lockedDice:hover {
+    background-color: rgb(200,0,0);
+    color: white;
+}
+
+.categoryHeader {
+    background-color: aqua;
+    width: 50%;
+    text-align: center;
+    line-height: 3.5vh;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.categoryPoints {
+    line-height: 3.5vh;
+    width: 50%;
+}
+.categoryPoints > button {
+    width: 100%;
+}
+.categoryRow {
+    display: flex;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;    
+    max-width: 500px;
+}
+.flexContainer > div {
+    width: 100%;
+}
+
+.freeDice, .lockedDice {
+    position: relative;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    font-size: 5vh;
+    line-height: 100px;
+}
+.freeDice:focus, .lockedDice:focus, button {
+    outline: none;
+}
