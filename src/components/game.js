@@ -14,6 +14,7 @@ import { BigStraight} from './bigStraight';
 import { FullHouse } from './fullHouse';
 import { Random} from './random';
 import { Yatzy } from './yatzy';
+import { DiceSvg } from './diceSvg';
 
 
 export let pointArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -24,27 +25,27 @@ export function Game(){
     const [throwCount, setThrowCount] = useState(0);
     const [dices, setDices] = useState([
         {
-            value: "-",
+            value: 0,
             isLocked: false,
             className: "freeDice"
         },
         {
-            value: "-",
+            value: 0,
             isLocked: false,
             className: "freeDice"
         },
         {
-            value: "-",
+            value: 0,
             isLocked: false,
             className: "freeDice"
         },
         {
-            value: "-",
+            value: 0,
             isLocked: false,
             className: "freeDice"
         },
         {
-            value: "-",
+            value: 0,
             isLocked: false,
             className: "freeDice"
         }
@@ -63,16 +64,19 @@ export function Game(){
                 newDices[i].className = "freeDice";
             }
             setDices(newDices);
-        }
-        let newThrowCount = throwCount + 1;
-        setThrowCount(newThrowCount);
-        const newerDices = [...dices];        
+        }   
+        
         for (let i = 0; i < 5; i++) {
             if (!newDices[i].isLocked) {
                 newDices[i].value = Math.floor((Math.random()*6)+1);
             }
         }
-        setDices(newerDices);
+        
+        setDices(newDices);
+        
+        let newThrowCount = throwCount + 1;
+        setThrowCount(newThrowCount);
+        
     }
 
     const lockDice = index => {
@@ -127,13 +131,13 @@ export function Game(){
                     <button className="throwButton" onClick={() => throwDices()}>Throw dice {throwCount}/3</button>
                 </div>
                 <div className="diceRow">
-                    <button className={dices[0].className}onClick={() => lockDice(0)}>{dices[0].value}</button>
-                    <button className={dices[1].className}onClick={() => lockDice(1)}>{dices[1].value}</button>
-                    <button className={dices[2].className}onClick={() => lockDice(2)}>{dices[2].value}</button>
-                    <button className={dices[3].className}onClick={() => lockDice(3)}>{dices[3].value}</button>
-                    <button className={dices[4].className}onClick={() => lockDice(4)}>{dices[4].value}</button>
+                    <button onClick={() => lockDice(0)}><DiceSvg diceValue={dices[0].value} className={dices[0].className}/></button>
+                    <button onClick={() => lockDice(1)}><DiceSvg diceValue={dices[1].value} className={dices[1].className}/></button>
+                    <button onClick={() => lockDice(2)}><DiceSvg diceValue={dices[2].value} className={dices[2].className}/></button>
+                    <button onClick={() => lockDice(3)}><DiceSvg diceValue={dices[3].value} className={dices[3].className}/></button>
+                    <button onClick={() => lockDice(4)}><DiceSvg diceValue={dices[4].value} className={dices[4].className}/></button>
                 </div>
-            </div>            
+            </div>  
         </div>
     )
 }
