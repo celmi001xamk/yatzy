@@ -1,82 +1,90 @@
 .throwButton {
-    background-color: rgba(225,225,225);
-    width: 100%;
-    line-height: 50px;
-    font-size: 2vh;
-    border: none;
+  background-color: rgba(225, 225, 225);
+  width: 100%;
+  line-height: 50px;
+  font-size: 2vh;
+  border: none;
 }
 .throwButton:hover {
-    background-color: rgba(175,175,175);
-    color: rgb(240,240,240);
+  background-color: rgba(175, 175, 175);
+  color: rgb(240, 240, 240);
 }
 
-.categoryFree, .categoryLocked {
-    height: 100%;
-    border: none;
-    font-size: 2vh;
+.categoryFree,
+.categoryLocked {
+  height: 100%;
+  border: none;
+  font-size: 2vh;
 }
-.categoryFree, .freeDice {
-    background-color:rgba(0,255,0,0.8);
+.categoryFree,
+.freeDice {
+  background-color: rgba(0, 255, 0, 0.8);
 }
-.categoryFree:hover, .freeDice:hover {
-    background-color: rgba(0,255,0,0.4);
-    color: rgb(240,240,240);
+.categoryFree:hover,
+.freeDice:hover {
+  background-color: rgba(0, 255, 0, 0.4);
+  color: rgb(240, 240, 240);
 }
 
-.categoryLocked, .lockedDice {
-    background-color: rgba(255,0,0,0.8);
+.categoryLocked,
+.lockedDice {
+  background-color: rgba(255, 0, 0, 0.8);
 }
-.categoryLocked:hover, .lockedDice:hover {
-    background-color: rgba(255,0,0,0.6);
-    color: rgb(240,240,240);
+.categoryLocked:hover,
+.lockedDice:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: rgb(240, 240, 240);
 }
 
 .categoryHeader {
-    background-color: rgb(0,255,0,0.4);
-    width: 50%;
-    text-align: center;
-    line-height: 3.5vh;
-    font-size: 2vh;
-    font-weight: bold;
+  background-color: rgb(0, 255, 0, 0.4);
+  width: 50%;
+  text-align: center;
+  line-height: 3.5vh;
+  font-size: 2vh;
+  font-weight: bold;
 }
 .categoryPoints {
-    line-height: 3.5vh;
-    width: 50%;
+  line-height: 3.5vh;
+  width: 50%;
 }
 .categoryPoints > button {
-    width: 100%;
+  width: 100%;
 }
 .categoryRow {
-    display: flex;
+  display: flex;
 }
 
 .flexContainer {
-    display: flex;
-    flex-direction: column;
-    margin: auto;    
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
 }
 .flexContainer > div {
-    width: 100%;
+  width: 100%;
 }
-.lockedDice, .freeDice {
-    padding: 0;
+.lockedDice,
+.freeDice {
+  padding: 0;
 }
-.freeDice:focus, .lockedDice:focus, button {
-    outline: none;
+.freeDice:focus,
+.lockedDice:focus,
+button {
+  outline: none;
 }
 .diceRow {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .diceRow > button {
-    border: none;
-    background-color: white;
+  border: none;
+  background-color: white;
 }
 svg {
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 85px;
-    height: 85px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 85px;
+  height: 85px;
 }
