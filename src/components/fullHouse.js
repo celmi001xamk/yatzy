@@ -45,23 +45,13 @@ export function FullHouse({ dices, throwCount, setThrowCount }) {
       newPoints = 0;
     }
 
-    /*if ((sortedDices[0] === sortedDices[1] && sortedDices[0] === sortedDices[2] && sortedDices[3] === sortedDices[4] && sortedDices[0] !== sortedDices[4])
-        || sortedDices[0] === sortedDices[1] && sortedDices[2] === sortedDices[3] && sortedDices[3] === sortedDices[4] && sortedDices[0] !== sortedDices[4]) {
-            newPoints += sortedDices.reduce(function(a,b) {
-                return a+b;
-            },0);
-                
-        } else {
-            newPoints = 0;
-        }*/
-
     setPoints(newPoints);
     return newPoints;
   };
 
   return (
     <div className="categoryRow">
-      <div className="categoryHeader">Full house (X X X Y Y)</div>
+      <div className="categoryHeader">Full house</div>
       <div className="categoryPoints">
         <button
           className={status}

@@ -41,7 +41,7 @@ export function ThreeOf({ dices, throwCount, setThrowCount }) {
 
   return (
     <div className="categoryRow">
-      <div className="categoryHeader">Three of the same (X X X ? ?)</div>
+      <div className="categoryHeader">Three of the same</div>
       <div className="categoryPoints">
         <button
           className={status}

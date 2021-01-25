@@ -4,6 +4,7 @@
   line-height: 50px;
   font-size: 2vh;
   border: none;
+  transition: background-color 0.25s, color 0.25s;
 }
 .throwButton:hover {
   background-color: rgba(175, 175, 175);
@@ -18,31 +19,43 @@
 }
 .categoryFree,
 .freeDice {
-  background-color: rgba(0, 255, 0, 0.8);
+  background-color: rgba(0, 100, 0, 0.6);
+  color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgba(0, 155, 0, 1);
+  transition: background-color 0.25s, color 0.25s;
 }
 .categoryFree:hover,
 .freeDice:hover {
   background-color: rgba(0, 255, 0, 0.4);
-  color: rgb(240, 240, 240);
+  color: black;
 }
 
 .categoryLocked,
 .lockedDice {
-  background-color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(200, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 0, 0, 1);
+  transition: background-color 0.25s;
 }
-.categoryLocked:hover,
+
 .lockedDice:hover {
   background-color: rgba(255, 0, 0, 0.6);
   color: rgb(240, 240, 240);
 }
 
-.categoryHeader {
-  background-color: rgb(0, 255, 0, 0.4);
+.categoryHeader,
+.categorySum {
+  background-color: rgba(205, 224, 119, 0.6);
   width: 50%;
-  text-align: center;
   line-height: 3.5vh;
   font-size: 2vh;
   font-weight: bold;
+  border-bottom: 1px solid rgba(205, 224, 119, 1);
+}
+.categoryHeader {
+  padding: 0 5px;
+}
+.categorySum {
+  text-align: center;
 }
 .categoryPoints {
   line-height: 3.5vh;
@@ -52,18 +65,25 @@
   width: 100%;
 }
 .categoryRow {
+  width: 100%;
   display: flex;
 }
 
-.flexContainer {
+.tableContainer {
   display: flex;
   flex-direction: column;
   margin: auto;
   max-width: 500px;
+  outline: 4px solid black;
 }
-.flexContainer > div {
-  width: 100%;
+
+.diceContainer {
+  display: flex;
+  max-width: 500px;
+  margin: auto;
+  padding-top: 10px;
 }
+
 .lockedDice,
 .freeDice {
   padding: 0;
@@ -80,11 +100,15 @@ button {
 }
 .diceRow > button {
   border: none;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
 }
 svg {
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 10px;
-  width: 85px;
-  height: 85px;
+  width: 75px;
+  height: 75px;
+}
+
+svg:hover {
+  transform: scale(1.05);
 }

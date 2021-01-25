@@ -19,6 +19,7 @@ import { DiceSvg } from "./diceSvg";
 export let pointArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 export function Game() {
+  const [isGameOn, setIsGameOn] = useState(false);
   const [throwCount, setThrowCount] = useState(0);
   const [dices, setDices] = useState([
     {
@@ -48,11 +49,8 @@ export function Game() {
     },
   ]);
 
-  useEffect(() => {
-    setThrowCount(throwCount);
-  });
-
   const throwDices = () => {
+    setIsGameOn(true);
     if (throwCount >= 3) return;
     const newDices = [...dices];
     if (throwCount === 0) {
@@ -85,11 +83,11 @@ export function Game() {
   };
 
   return (
-    <div>
-      <div className="flexContainer">
+    <div className="gameContainer">
+      <div className="tableContainer">
         <div className="categoryRow">
-          <div className="categoryHeader">Category</div>
-          <div className="categoryHeader">Kalle</div>
+          <div className="categorySum">Category</div>
+          <div className="categorySum">Kalle</div>
         </div>
         <Ones
           dices={dices}
@@ -123,7 +121,7 @@ export function Game() {
         />
         <div className="categoryRow">
           <div className="categoryHeader">Upper sum</div>
-          <div className="categoryHeader">
+          <div className="categorySum">
             {pointArray.slice(0, 6).reduce(function (a, b) {
               return a + b;
             }, 0)}
@@ -131,7 +129,7 @@ export function Game() {
         </div>
         <div className="categoryRow">
           <div className="categoryHeader">Bonus (63)</div>
-          <div className="categoryHeader">
+          <div className="categorySum">
             {pointArray.slice(0, 6).reduce(function (a, b) {
               return a + b;
             }, 0) >= 63
@@ -186,7 +184,7 @@ export function Game() {
         />
         <div className="categoryRow">
           <div className="categoryHeader">Total</div>
-          <div className="categoryHeader">
+          <div className="categorySum">
             {pointArray.reduce(function (a, b) {
               return a + b;
             }, 0)}
@@ -197,39 +195,43 @@ export function Game() {
             Throw dice {throwCount}/3
           </button>
         </div>
-        <div className="diceRow">
-          <button onClick={() => lockDice(0)}>
-            <DiceSvg
-              diceValue={dices[0].value}
-              className={dices[0].className}
-            />
-          </button>
-          <button onClick={() => lockDice(1)}>
-            <DiceSvg
-              diceValue={dices[1].value}
-              className={dices[1].className}
-            />
-          </button>
-          <button onClick={() => lockDice(2)}>
-            <DiceSvg
-              diceValue={dices[2].value}
-              className={dices[2].className}
-            />
-          </button>
-          <button onClick={() => lockDice(3)}>
-            <DiceSvg
-              diceValue={dices[3].value}
-              className={dices[3].className}
-            />
-          </button>
-          <button onClick={() => lockDice(4)}>
-            <DiceSvg
-              diceValue={dices[4].value}
-              className={dices[4].className}
-            />
-          </button>
-        </div>
       </div>
+      {isGameOn ? (
+        <div className="diceContainer">
+          <div className="diceRow">
+            <button onClick={() => lockDice(0)}>
+              <DiceSvg
+                diceValue={dices[0].value}
+                className={dices[0].className}
+              />
+            </button>
+            <button onClick={() => lockDice(1)}>
+              <DiceSvg
+                diceValue={dices[1].value}
+                className={dices[1].className}
+              />
+            </button>
+            <button onClick={() => lockDice(2)}>
+              <DiceSvg
+                diceValue={dices[2].value}
+                className={dices[2].className}
+              />
+            </button>
+            <button onClick={() => lockDice(3)}>
+              <DiceSvg
+                diceValue={dices[3].value}
+                className={dices[3].className}
+              />
+            </button>
+            <button onClick={() => lockDice(4)}>
+              <DiceSvg
+                diceValue={dices[4].value}
+                className={dices[4].className}
+              />
+            </button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export function Yatzy({ dices, throwCount, setThrowCount }) {
 
   return (
     <div className="categoryRow">
-      <div className="categoryHeader">Yatzy (X X X X X)</div>
+      <div className="categoryHeader">Yatzy</div>
       <div className="categoryPoints">
         <button
           className={status}

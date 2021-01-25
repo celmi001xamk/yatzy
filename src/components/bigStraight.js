@@ -39,7 +39,7 @@ export function BigStraight({ dices, throwCount, setThrowCount }) {
 
   return (
     <div className="categoryRow">
-      <div className="categoryHeader">Big straight (2 3 4 5 6)</div>
+      <div className="categoryHeader">Big straight</div>
       <div className="categoryPoints">
         <button
           className={status}

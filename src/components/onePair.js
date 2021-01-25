@@ -39,7 +39,7 @@ export function OnePair({ dices, throwCount, setThrowCount }) {
 
   return (
     <div className="categoryRow">
-      <div className="categoryHeader">One pair (X X ? ? ?)</div>
+      <div className="categoryHeader">One pair</div>
       <div className="categoryPoints">
         <button
           className={status}
