@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Ones } from "./ones";
 import { Twos } from "./twos";
 import { Threes } from "./threes";
@@ -18,7 +18,7 @@ import { DiceSvg } from "./diceSvg";
 
 export let pointArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-export function Game() {
+export function Game({playerName}) {
   const [isGameOn, setIsGameOn] = useState(false);
   const [throwCount, setThrowCount] = useState(0);
   const [dices, setDices] = useState([
@@ -87,7 +87,7 @@ export function Game() {
       <div className="tableContainer">
         <div className="categoryRow">
           <div className="categorySum">Category</div>
-          <div className="categorySum">Kalle</div>
+          <div className="categorySum">{playerName}</div>
         </div>
         <Ones
           dices={dices}
