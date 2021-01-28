@@ -10,14 +10,18 @@ body {
     width: 100%;
   }
 }
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
 .gameContainer {
   margin: auto;
   width: 500px;
 }
 
 .tableContainer {
-  margin: 5px;
   display: flex;
+  margin: 5px;
   flex-direction: column;
   border: 4px solid rgb(78, 20, 20);
   border-radius: 5px;

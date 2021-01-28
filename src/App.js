@@ -7,7 +7,7 @@ export default function App() {
   const [playerName, setPlayerName] = useState("");
 
   return (
-    <div>
+    <div className="mainContainer">
       <Header isGameOn={isGameOn} setIsGameOn={setIsGameOn} setPlayerName={setPlayerName}/>
       {isGameOn ? <Game playerName={playerName}/>: null}
     </div>
