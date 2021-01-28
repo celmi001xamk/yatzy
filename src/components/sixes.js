@@ -34,7 +34,7 @@ export function Sixes({ dices, throwCount, setThrowCount }) {
   return (
     <div className="categoryRow">
       <div className="categoryHeader">Sixes</div>
-      <div className="categoryPoints">
+      <div className="categoryCentered">
         <button
           className={status}
           onClick={() => {

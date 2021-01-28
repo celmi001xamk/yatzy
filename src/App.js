@@ -5,6 +5,7 @@ import { Header } from "./components/header";
 export default function App() {
   const [isGameOn, setIsGameOn] = useState(false);
   const [playerName, setPlayerName] = useState("");
+
   return (
     <div>
       <Header isGameOn={isGameOn} setIsGameOn={setIsGameOn} setPlayerName={setPlayerName}/>

@@ -33,7 +33,7 @@ export function Fives({ dices, throwCount, setThrowCount }) {
   return (
     <div className="categoryRow">
       <div className="categoryHeader">Fives</div>
-      <div className="categoryPoints">
+      <div className="categoryCentered">
         <button
           className={status}
           onClick={() => {

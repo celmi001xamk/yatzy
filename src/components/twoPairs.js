@@ -46,7 +46,7 @@ export function TwoPairs({ dices, throwCount, setThrowCount }) {
   return (
     <div className="categoryRow">
       <div className="categoryHeader">Two pairs</div>
-      <div className="categoryPoints">
+      <div className="categoryCentered">
         <button
           className={status}
           onClick={() => {

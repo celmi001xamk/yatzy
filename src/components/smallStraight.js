@@ -40,7 +40,7 @@ export function SmallStraight({ dices, throwCount, setThrowCount }) {
   return (
     <div className="categoryRow">
       <div className="categoryHeader">Small straight</div>
-      <div className="categoryPoints">
+      <div className="categoryCentered">
         <button
           className={status}
           onClick={() => {

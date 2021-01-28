@@ -1,3 +1,33 @@
+* {
+  margin: 0;
+}
+body {
+  background-color:rgb(245, 245, 245);
+}
+
+@media only screen and (max-width: 1080px) {
+  .gameContainer {
+    width: 100%;
+  }
+}
+.gameContainer {
+  margin: auto;
+  width: 500px;
+}
+
+.tableContainer {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid rgb(78, 20, 20);
+  border-radius: 5px;
+}
+
+.diceContainer {
+  display: flex;
+  margin-top: 10px;
+}
+
 .header {
   display: flex;
   width: 500px;
@@ -11,15 +41,17 @@
   flex-grow: 1;
   background-color: white;
   margin: 0 5px;
+  font-size: 1.5vh;
 }
 .header > input {
   padding: 0 5px;
   border-radius: 5px;
   flex-grow: 2;
-  margin-right: 5px;
+  margin: 0 5px;
+  font-size: 2vh;
 }
 input:disabled {
-  background-color: rgb(175,175,175);
+  background-color: rgb(175, 175, 175);
 }
 
 .throwButton {
@@ -41,81 +73,55 @@ input:disabled {
   border: none;
   font-size: 2.25vh;
 }
-.categoryFree,
-.freeDice {
+.categoryFree {
   background-color: rgba(0, 100, 0, 0.6);
   color: rgb(245, 245, 245);
-  border-bottom: 1px solid rgba(0, 155, 0, 1);
   transition: background-color 0.25s, color 0.25s;
 }
-.categoryFree:hover,
-.freeDice:hover {
+.categoryFree:hover {
   background-color: rgba(0, 255, 0, 0.4);
   color: black;
+}
+.freeDice {
+  background-color: rgb(130, 200, 94);
+  transition: background-color 0.1s;
+}
+.freeDice:hover {
+  background-color: rgb(130, 248, 94);
 }
 
 .categoryLocked,
 .lockedDice {
-  background-color: rgba(200, 0, 0, 0.8);
-  border-bottom: 1px solid rgba(255, 0, 0, 1);
+  background-color: rgb(215, 0, 0);
   transition: background-color 0.25s;
+  font-weight: bold;
 }
 
 .lockedDice:hover {
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(245, 0, 0, 1);
   color: rgb(240, 240, 240);
 }
 
 .categoryHeader,
-.categorySum {
+.categoryCentered {
   background-color: rgba(205, 224, 119, 0.6);
   width: 50%;
-  line-height: 3.5vh;
   font-size: 2.5vh;
   font-weight: bold;
   border-bottom: 1px solid rgba(205, 224, 119, 1);
-}
-.categoryHeader {
   padding: 0 5px;
 }
-.categorySum {
+
+.categoryCentered {
   text-align: center;
 }
-.categoryPoints {
-  width: 50%;
-}
-.categoryPoints > button {
+.categoryCentered > button {
   width: 100%;
 }
+
 .categoryRow {
   width: 100%;
   display: flex;
-}
-.gameContainer {
-  margin: auto;
-  width: 500px;
-}
-@media only screen and (max-width: 1080px) {
-  .gameContainer {
-    width: 100%;
-  }
-}
-.tableContainer {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  border: 4px solid rgb(78, 20, 20);
-  border-radius: 5px;
-}
-
-.diceContainer {
-  display: flex;
-  margin-top: 10px;
-}
-
-.lockedDice,
-.freeDice {
-  padding: 0;
 }
 
 button {
@@ -124,22 +130,19 @@ button {
 .diceRow {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .diceRow > button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
 svg {
-  stroke: white;
-  stroke-width: 0.05cm;
   border-radius: 10px;
   border: 2px solid black;
-  border-bottom: 5px solid black;
-  width: 85px;
-  height: 85px;
+  width: 65px;
+  height: 65px;
 }
 
 svg:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.10) rotate(2deg);
 }

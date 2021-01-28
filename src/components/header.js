@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 export function Header({ isGameOn, setIsGameOn, setPlayerName }) {
   return (
     <div className="header">

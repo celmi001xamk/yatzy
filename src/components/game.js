@@ -18,7 +18,7 @@ import { DiceSvg } from "./diceSvg";
 
 export let pointArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-export function Game({playerName}) {
+export function Game({playerName, setPoints}) {
   const [isGameOn, setIsGameOn] = useState(false);
   const [throwCount, setThrowCount] = useState(0);
   const [dices, setDices] = useState([
@@ -86,8 +86,8 @@ export function Game({playerName}) {
     <div className="gameContainer">
       <div className="tableContainer">
         <div className="categoryRow">
-          <div className="categorySum">Category</div>
-          <div className="categorySum">{playerName}</div>
+          <div className="categoryCentered">Category</div>
+          <div className="categoryCentered">{playerName}</div>
         </div>
         <Ones
           dices={dices}
@@ -120,16 +120,16 @@ export function Game({playerName}) {
           setThrowCount={setThrowCount}
         />
         <div className="categoryRow">
-          <div className="categoryHeader">Upper sum</div>
-          <div className="categorySum">
+          <div className="categoryCentered">Upper sum</div>
+          <div className="categoryCentered">
             {pointArray.slice(0, 6).reduce(function (a, b) {
               return a + b;
             }, 0)}
           </div>
         </div>
         <div className="categoryRow">
-          <div className="categoryHeader">Bonus (63)</div>
-          <div className="categorySum">
+          <div className="categoryCentered">Bonus (63)</div>
+          <div className="categoryCentered">
             {pointArray.slice(0, 6).reduce(function (a, b) {
               return a + b;
             }, 0) >= 63
@@ -183,8 +183,8 @@ export function Game({playerName}) {
           setThrowCount={setThrowCount}
         />
         <div className="categoryRow">
-          <div className="categoryHeader">Total</div>
-          <div className="categorySum">
+          <div className="categoryCentered">Total</div>
+          <div className="categoryCentered">
             {pointArray.reduce(function (a, b) {
               return a + b;
             }, 0)}
