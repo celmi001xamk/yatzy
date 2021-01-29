@@ -5,19 +5,26 @@ body {
   background-color:rgb(245, 245, 245);
 }
 
-@media only screen and (max-width: 1080px) {
-  .gameContainer {
-    width: 100%;
-  }
-}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
 }
 .gameContainer {
   margin: auto;
-  width: 500px;
+  width: 100%;
 }
+@media only screen and (min-width: 801px) {
+  .gameContainer {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .gameContainer {
+    width: 500px;
+  }
+}
+
 
 .tableContainer {
   display: flex;
