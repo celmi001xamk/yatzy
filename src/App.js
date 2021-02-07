@@ -56,7 +56,7 @@ function App() {
       className: "tableRowConstant",
     },
     {
-      name: "Bonus",
+      name: "Bonus ",
       value: 0,
       locked: false,
       className: "tableRowConstant",
@@ -174,7 +174,7 @@ function App() {
     }
     let newPoints = [...points];
     newPoints[index].locked = true;
-    
+
     for (let i = 0; i < points.length; i++) {
       if (!points[i].locked) {
         points[i].value = 0;
