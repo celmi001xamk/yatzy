@@ -174,7 +174,15 @@ function App() {
     }
     let newPoints = [...points];
     newPoints[index].locked = true;
+    
+    for (let i = 0; i < points.length; i++) {
+      if (!points[i].locked) {
+        points[i].value = 0;
+      }
+    }
+
     setPoints(newPoints);
+    
     countCategory(6);
     countCategory(7);
     countCategory(17);
