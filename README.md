@@ -7,6 +7,6 @@ I work and study full time so giving this project time when I can.
 
 ## Todo
 
-Week 5: Refactoring the codebase.
+Week 5-6: Refactoring the codebase and adding features.
 
-Week 6-7: Starting to implement log-in system and hiscores.
+Week 7-8: Starting to implement log-in system and hiscores.
