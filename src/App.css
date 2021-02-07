@@ -22,9 +22,10 @@ button:focus {
 
 .App {
   margin: auto;
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 
