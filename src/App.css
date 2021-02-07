@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  color: white;
+  background-color:teal;
+  border: 3px solid rgb(2, 99, 99);
+  margin: 10px 2px;
+  transition: background-color 0.5s;
+  font-size: 2.5vh;
+}
+button:hover {
+  background-color: rgb(2, 99, 99);
+}
+
+.App {
+  margin: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+

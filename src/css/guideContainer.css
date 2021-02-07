@@ -1,0 +1,9 @@
+.guideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+.guideParagraph {
+  font-size: 3vh;
+}

@@ -1,0 +1,4 @@
+.diceContainer {
+  display: flex;
+  justify-content: space-between;
+}

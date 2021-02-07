@@ -1,0 +1,52 @@
+.gameTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: antiquewhite;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+.tablePlayer {
+  width: 100%;
+  font-size: 3.5vh;
+  padding: 10px;
+}
+.tableRow,
+.tableRowLocked,
+.tableRowConstant {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.tableRowLocked {
+  background-color: firebrick;
+  color: white;
+}
+
+.tableRowHeader,
+.tableRowHeaderConstant {
+  display: block;
+  width: 70%;
+  text-align: start;
+  padding: 2px 10px;
+  font-size: 2vh;
+}
+.tableRowHeaderConstant,
+.tableRowSumConstant {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.tableRowSum,
+.tableRowSumConstant {
+  width: 40%;
+  font-size: 2vh;
+  text-align: center;
+  border-left: 1px solid black;
+}
+tbody > .tableRow:hover {
+  transition: background-color 0.25s;
+  background-color: teal;
+  color: white;
+}
