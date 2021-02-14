@@ -12,7 +12,7 @@ function App() {
   const [isGameActive, setIsGameActive] = useState(false);
   const [playerName, setPlayerName] = useState("Nameless");
   const [throwing, setThrowing] = useState(false);
-  
+
   const [points, setPoints] = useState([
     {
       name: "Ones",
@@ -127,30 +127,29 @@ function App() {
     {
       value: 1,
       locked: false,
-      throwing: false
+      throwing: false,
     },
     {
       value: 1,
       locked: false,
-      throwing: false
+      throwing: false,
     },
     {
       value: 1,
       locked: false,
-      throwing: false
+      throwing: false,
     },
     {
       value: 1,
       locked: false,
-      throwing: false
+      throwing: false,
     },
     {
       value: 1,
       locked: false,
-      throwing: false
+      throwing: false,
     },
   ]);
-  
 
   const changeGameState = () => {
     setIsGameActive(!isGameActive);
@@ -175,7 +174,14 @@ function App() {
     setPoints(newPoints);
   };
   const lockCategory = (index) => {
-    if (index === 6 || index === 7 || index === 17 || throwCount === 0 || throwing) {
+    if (
+      throwCount === 0 ||
+      throwing ||
+      points[index].locked ||
+      points[index].name === "Bonus" ||
+      points[index].name === "Middle sum" ||
+      points[index].name === "Total"
+    ) {
       return;
     }
     let newPoints = [...points];
@@ -188,7 +194,7 @@ function App() {
     }
 
     setPoints(newPoints);
-    
+
     countCategory(6);
     countCategory(7);
     countCategory(17);
@@ -201,7 +207,7 @@ function App() {
     setThrowing(true);
     for (let i = 0; i < dices.length; i++) {
       setTimeout(() => {
-        newDices.map(dice => dice.throwing = true);
+        newDices.map((dice) => (dice.throwing = true));
         for (let i = 0; i < dices.length; i++) {
           if (throwCount === 0) {
             newDices[i].locked = false;
@@ -212,18 +218,15 @@ function App() {
         }
         for (let i = 0; i < points.length; i++) {
           countCategory(i);
-          
         }
         if (i === 4) {
-          newDices.map(dice => dice.throwing = false);
+          newDices.map((dice) => (dice.throwing = false));
         }
         setDices(newDices);
         if (i === dices.length - 1) setThrowing(false);
       }, 200 * i);
       setThrowCount(throwCount + 1);
     }
-    
-    
   };
 
   const lockDice = (index) => {
