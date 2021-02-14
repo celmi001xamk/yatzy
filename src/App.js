@@ -53,13 +53,13 @@ function App() {
     {
       name: "Middle sum",
       value: 0,
-      locked: false,
+      locked: true,
       className: "tableRowConstant",
     },
     {
       name: "Bonus",
       value: 0,
-      locked: false,
+      locked: true,
       className: "tableRowConstant",
     },
     {
@@ -119,7 +119,7 @@ function App() {
     {
       name: "Total",
       value: 0,
-      locked: false,
+      locked: true,
       className: "tableRowConstant",
     },
   ]);
@@ -177,10 +177,7 @@ function App() {
     if (
       throwCount === 0 ||
       throwing ||
-      points[index].locked ||
-      points[index].name === "Bonus" ||
-      points[index].name === "Middle sum" ||
-      points[index].name === "Total"
+      points[index].locked
     ) {
       return;
     }
