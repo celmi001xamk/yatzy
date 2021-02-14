@@ -6,7 +6,7 @@ export function DiceContainer({dices, lockDice}) {
     <div className="diceContainer">
       {dices.map((dice, index) => (
         <div key={index} onClick={() => lockDice(index)}>
-          <DiceSvg value={dice.value} locked={dice.locked} />
+          <DiceSvg value={dice.value} locked={dice.locked} throwing={dice.throwing} />
         </div>
       ))}
     </div>

@@ -3,11 +3,14 @@ svg {
   border: 2px solid black;
   width: 65px;
   height: 65px;
+  transition: transform 0.4s;
 }
-svg:hover {
+.freeDice:hover,
+.lockedDice:hover {
   transform: scale(1.1) rotate(2deg);
 }
-.freeDice {
+.freeDice,
+.throwingDice {
   background-color: rgb(194, 247, 115);
 }
 .freeDice:hover {
@@ -18,4 +21,8 @@ svg:hover {
 }
 .lockedDice:hover {
   background-color: rgb(240, 8, 8);
+}
+.throwingDice {
+  transform: scale(1.1) rotate(360deg);
+
 }
