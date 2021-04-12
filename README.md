@@ -9,4 +9,4 @@ I work and study full time so giving this project time when I can.
 
 Week 5-6: Refactoring the codebase and adding features.
 
-Week 7-8: Starting to implement log-in system and hiscores.
+<del>Week 7-8: Starting to implement log-in system and hiscores.<del>
